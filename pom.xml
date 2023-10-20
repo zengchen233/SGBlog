@@ -11,7 +11,7 @@
     <modules>
         <module>blog-framework</module>
         <module>blog-admin</module>
-        <module>blog-ui</module>
+        <module>blog-fronted</module>
     </modules>
 
     <properties>
@@ -50,7 +50,7 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.4.3</version>
+                <version>3.5.2</version>
             </dependency>
 
             <!--阿里云OSS-->
