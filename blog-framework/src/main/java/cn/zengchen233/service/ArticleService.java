@@ -1,5 +1,6 @@
 package cn.zengchen233.service;
 
+import cn.zengchen233.domain.ResponseResult;
 import cn.zengchen233.entity.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -9,5 +10,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2023-10-20 15:45:33
 */
 public interface ArticleService extends IService<Article> {
-
+    ResponseResult hotArticleList();
 }
