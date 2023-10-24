@@ -1,25 +1,1 @@
-server:
-  port: 7777
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sg_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: zengchen
-    password: zengchen233
-  servlet:
-    multipart:
-      max-file-size: 2MB
-      max-request-size: 5MB
-
-mybatis-plus:
-  configuration:
-    #日志
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  global-config:
-    db-config:
-      logic-delete-field: delFlag
-      logic-delete-value: 1
-      logic-not-delete-value: 0
-      id-type: auto
-  #mapper-locations: classpath*:/mapper/*.xml
-  type-aliases-package: cn.zengchen233.entity
+server:  port: 7777spring:  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver    url: jdbc:mysql://localhost:3306/sg_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai    username: zengchen    password: zengchen233    type: com.alibaba.druid.pool.DruidDataSource    druid:      # 初始连接数      initial-size: 5      # 最小连接池数量      min-idle: 10      # 最大连接数量      max-active: 20      # 配置获取连接等待超时的时间      maxWait: 60000      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒      timeBetweenEvictionRunsMillis: 60000      # 配置一个连接在池中最小生存的时间，单位是毫秒      minEvictableIdleTimeMillis: 300000      # 配置一个连接在池中最大生存的时间，单位是毫秒      maxEvictableIdleTimeMillis: 900000      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，wall用于防火墙      filters: stat,wall,log4j      # 合并多个DruidDatasource的监控数据      useGlobalDataSourceStat: true      #通过connectProperties属性来打开mergeSql功能 慢Sql记录      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500;  servlet:    multipart:      max-file-size: 2MB      max-request-size: 5MBmybatis-plus:  configuration:    #日志    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  global-config:    db-config:      logic-delete-field: delFlag      logic-delete-value: 1      logic-not-delete-value: 0      id-type: auto  #mapper-locations: classpath*:/mapper/*.xml  type-aliases-package: cn.zengchen233.entity

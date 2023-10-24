@@ -19,7 +19,6 @@ public class CorsConfig {
 
     /**
      * @description 允许本地8080端口进行访问
-     * @param
      * @return org.springframework.web.filter.CorsFilter
      */
     @Bean
